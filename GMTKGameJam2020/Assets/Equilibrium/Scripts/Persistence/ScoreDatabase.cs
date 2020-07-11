@@ -49,7 +49,6 @@ namespace Equilibrium
         private void OnEnable()
         {
             Load();
-            Save();
         }
 
         public void AddEntry(ScorePersistence score)
@@ -66,7 +65,7 @@ namespace Equilibrium
                 string jsonContent = File.ReadAllText(path);
                 if (string.IsNullOrEmpty(jsonContent) == false && jsonContent != "{}")
                 {
-                    ScorePersistenceJSON scoresJson = JsonUtility.FromJson<ScorePersistenceJSON>(path);
+                    ScorePersistenceJSON scoresJson = JsonUtility.FromJson<ScorePersistenceJSON>(jsonContent);
                     _scores = scoresJson.m_scores;
                 }
             }
@@ -74,11 +73,6 @@ namespace Equilibrium
 
         public void Save()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                _scores.Add(new ScorePersistence("Toto : " + i, "10", "20", "20'3", "1240"));
-            }
-
             ScorePersistenceJSON json = new ScorePersistenceJSON(_scores);
             string path = Path.Combine(Application.persistentDataPath, m_loadAt);
             string jsonContent = JsonUtility.ToJson(json, true);

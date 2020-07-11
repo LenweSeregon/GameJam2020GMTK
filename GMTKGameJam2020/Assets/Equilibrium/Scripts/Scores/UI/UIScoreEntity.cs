@@ -15,10 +15,14 @@
 
         public void Init(string name, string coin, string enemyKilled, string time, string globalScore)
         {
+            int secondsAsInt = int.Parse(time);
+            string minutes = Mathf.Floor(secondsAsInt / 60.0f).ToString("00");
+            string seconds = (secondsAsInt % 60).ToString("00");
+            
             m_playerNameText.SetText(name);
             m_playerCoinText.SetText(coin);
             m_playerEnemyKilledText.SetText(enemyKilled);
-            m_playerTimeText.SetText(time);
+            m_playerTimeText.SetText(minutes + "'" + seconds);
             m_playerGlobalScoreText.SetText(globalScore);
         }
     }

@@ -561,8 +561,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 275.65372, y: -44.275997}
-  m_SizeDelta: {x: 551.30743, y: 88.551994}
+  m_AnchoredPosition: {x: 272.62518, y: -44.275997}
+  m_SizeDelta: {x: 545.25037, y: 88.551994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5235600864226112931
 MonoBehaviour:
@@ -708,8 +708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 964.788, y: -44.275997}
-  m_SizeDelta: {x: 275.65372, y: 88.551994}
+  m_AnchoredPosition: {x: 954.1881, y: -44.275997}
+  m_SizeDelta: {x: 272.62518, y: 88.551994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6716628469835466137
 MonoBehaviour:
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 795878965689039491}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.85
+  m_Size: 0.8166666
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1350,8 +1350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1240.4418, y: -44.275997}
-  m_SizeDelta: {x: 275.65372, y: 88.551994}
+  m_AnchoredPosition: {x: 1226.8134, y: -44.275997}
+  m_SizeDelta: {x: 272.62518, y: 88.551994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6715730949942597614
 MonoBehaviour:
@@ -1582,10 +1582,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -1805,8 +1805,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 689.1343, y: -44.275997}
-  m_SizeDelta: {x: 275.65372, y: 88.551994}
+  m_AnchoredPosition: {x: 681.563, y: -44.275997}
+  m_SizeDelta: {x: 272.62518, y: 88.551994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3701091276089070133
 MonoBehaviour:
@@ -2575,8 +2575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1516.0955, y: -44.275997}
-  m_SizeDelta: {x: 275.65372, y: 88.551994}
+  m_AnchoredPosition: {x: 1499.4386, y: -44.275997}
+  m_SizeDelta: {x: 272.62518, y: 88.551994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736279624605323961
 MonoBehaviour:
@@ -3360,10 +3360,40 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7084072065747730126}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782533842810602610, guid: 6d7a8e65436ea3e418a0715780aab50e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2975657971423786604, guid: 6d7a8e65436ea3e418a0715780aab50e,
         type: 3}
       propertyPath: m_Name
-      value: Exit
+      value: Back
       objectReference: {fileID: 0}
     - target: {fileID: 3649420720351821354, guid: 6d7a8e65436ea3e418a0715780aab50e,
         type: 3}
@@ -3388,7 +3418,7 @@ PrefabInstance:
     - target: {fileID: 3649420720351821354, guid: 6d7a8e65436ea3e418a0715780aab50e,
         type: 3}
       propertyPath: m_text
-      value: Exit
+      value: Back
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7a8e65436ea3e418a0715780aab50e, type: 3}
