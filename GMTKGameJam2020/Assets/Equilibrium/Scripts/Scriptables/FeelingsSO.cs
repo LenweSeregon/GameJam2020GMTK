@@ -9,15 +9,21 @@
 	public class FeelingsSO : ScriptableObject
 	{
 		[Serializable]
-		public class FeelingSOItem : ScriptableObject
+		public class FeelingSOItem
 		{
 			[SerializeField] IntVariable m_property;
-			[SerializeField] float m_factor;
+			[SerializeField] float m_EffectMaxValue;
+			[SerializeField] Sprite m_Sprite;
+			[SerializeField] Color m_Color;
 		}
 
 
 		[SerializeField] IntVariable m_value;
-		[SerializeField] List<FeelingSOItem> m_positiveEffects;
-		[SerializeField] List<FeelingSOItem> m_negativeEffects;
+		[SerializeField] List<FeelingSOItem> m_positiveBonusEffects;
+		[SerializeField] List<FeelingSOItem> m_negativeBonusEffects;
+		[SerializeField] List<FeelingSOItem> m_positiveMalusEffects;
+		[SerializeField] List<FeelingSOItem> m_negativeMalusEffects;
+		[SerializeField] int m_negativeThreshold;
+		[SerializeField] int m_positiveThreshold;
 	}
 }
