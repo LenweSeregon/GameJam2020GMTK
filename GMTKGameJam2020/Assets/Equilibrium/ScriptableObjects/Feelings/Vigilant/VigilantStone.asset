@@ -15,3 +15,7 @@ MonoBehaviour:
   _initialValue: 0
   _value: 0
   _eventChanged: {fileID: 11400000, guid: 3b59c81ffb355d94c9c8c3f23dc086b6, type: 2}
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
+  m_minValue: -100
+  m_maxValue: 100
