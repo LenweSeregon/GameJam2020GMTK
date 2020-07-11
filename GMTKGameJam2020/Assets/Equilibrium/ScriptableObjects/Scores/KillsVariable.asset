@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: KillsVariable
   m_EditorClassIdentifier: 
   _initialValue: 10
-  _value: 0
-  _eventChanged: {fileID: 0}
+  _value: 10
+  _eventChanged: {fileID: 11400000, guid: 2992933829f5cf54181af20f08de4868, type: 2}
+  m_hasMinValue: 0
+  m_hasMaxValue: 0
+  m_minValue: 0
+  m_maxValue: 0

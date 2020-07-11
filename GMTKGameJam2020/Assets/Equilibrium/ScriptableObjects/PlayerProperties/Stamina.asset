@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
-  m_Name: CoinVariable
+  m_Name: Stamina
   m_EditorClassIdentifier: 
-  _initialValue: 10
-  _value: 10
-  _eventChanged: {fileID: 11400000, guid: 696ea3303b199ab4997926d1096395ea, type: 2}
-  m_hasMinValue: 0
-  m_hasMaxValue: 0
+  _initialValue: 100
+  _value: 0
+  _eventChanged: {fileID: 11400000, guid: 711f834ea02b45a48aa9a280cf91952c, type: 2}
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
   m_minValue: 0
-  m_maxValue: 0
+  m_maxValue: 100

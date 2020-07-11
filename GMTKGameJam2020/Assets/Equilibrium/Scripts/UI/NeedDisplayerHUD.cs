@@ -26,8 +26,10 @@ namespace Equilibrium
                 throw new Exception("Should have min and max");
             }
             
-            m_imageFill.fillAmount = ((float) m_needVariable.Value - m_needVariable.MinValue) / ((float) m_needVariable.MaxValue - m_needVariable.MinValue);
-            m_percentageText.SetText($"{value} %");
+            float percentage = ((float) m_needVariable.Value - m_needVariable.MinValue) / ((float) m_needVariable.MaxValue - m_needVariable.MinValue);
+            int percentage100 = Mathf.FloorToInt(percentage * 100);
+            m_imageFill.fillAmount = percentage;
+            m_percentageText.SetText($"{percentage100} %");
         }
     }
 }
