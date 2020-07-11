@@ -24,15 +24,33 @@
 		{
 			public override void CheckEffect(IntVariable feelingValue, int threshold)
 			{
-				if(feelingValue.Value <= threshold)
+				/*if(feelingValue.Value >= threshold)
 				{
 					int oldValue = m_property.Value;
 
-					float severity = (feelingValue.Value - threshold) / (100.0f - threshold);
+					float severity = (feelingValue.Value - threshold) / (((float)feelingValue.MaxValue) - threshold);
 					int applyValue = Mathf.FloorToInt(m_effectMaxValue * severity);
 
-					m_property.Value = Mathf.Min(m_property.Value - m_LastEffectValue + applyValue, 100);
+					m_property.Value = Mathf.Min((m_property.Value - m_LastEffectValue) + applyValue, feelingValue.MaxValue);
 					m_LastEffectValue = Mathf.Abs(oldValue - m_property.Value);
+				}*/
+
+				if (feelingValue.Value >= threshold)
+				{
+					int oldValue = m_property.Value;
+
+					float severity = (feelingValue.Value - threshold) / (((float)feelingValue.MaxValue) - threshold);
+					int applyValue = (m_effectMaxValue < 0) ? Mathf.CeilToInt(m_effectMaxValue * severity) : Mathf.FloorToInt(m_effectMaxValue * severity);
+
+
+					string s = m_property.Value + " - " + m_LastEffectValue + " + " + applyValue;
+					m_property.Value = Mathf.Min((m_property.Value - m_LastEffectValue) + applyValue, m_property.MaxValue);
+					s += " = " + m_property.Value + "(" + severity + ")";
+					Debug.Log(s);
+					if (oldValue != m_property.Value)
+					{
+						m_LastEffectValue += m_property.Value - oldValue;
+					}
 				}
 			}
 		}
@@ -46,11 +64,18 @@
 				{
 					int oldValue = m_property.Value;
 
-					float severity = (threshold - feelingValue.Value) / (threshold);
-					int applyValue = Mathf.FloorToInt(m_effectMaxValue * severity);
+					float severity = (feelingValue.Value - threshold) / (((float)feelingValue.MinValue) - threshold);
+					int applyValue = (m_effectMaxValue < 0) ? Mathf.CeilToInt(m_effectMaxValue * severity) : Mathf.FloorToInt(m_effectMaxValue * severity);
 
-					m_property.Value = Mathf.Max(m_property.Value + m_LastEffectValue - applyValue, 0);
-					m_LastEffectValue = Mathf.Abs(oldValue - m_property.Value);
+
+					string s = m_property.Value + " - " + m_LastEffectValue + " + " + applyValue;
+					m_property.Value = Mathf.Max((m_property.Value + m_LastEffectValue) + applyValue, m_property.MinValue);
+					s += " = " + m_property.Value + "(" + severity + ")";
+					Debug.Log(s);
+					if(oldValue != m_property.Value)
+					{
+						m_LastEffectValue += oldValue - m_property.Value;
+					}
 				}
 			}
 		}

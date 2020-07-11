@@ -15,3 +15,7 @@ MonoBehaviour:
   _initialValue: 0
   _value: 0
   _eventChanged: {fileID: 0}
+  m_hasMinValue: 0
+  m_hasMaxValue: 0
+  m_minValue: 0
+  m_maxValue: 0

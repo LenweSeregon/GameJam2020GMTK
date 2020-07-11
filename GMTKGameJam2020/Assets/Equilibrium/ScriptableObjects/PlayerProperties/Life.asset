@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Life
   m_EditorClassIdentifier: 
-  _initialValue: 75
+  _initialValue: 100
   _value: 100
   _eventChanged: {fileID: 11400000, guid: db2d776d18f75e54fbb809f3599a6f35, type: 2}
   m_hasMinValue: 1

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Speed
   m_EditorClassIdentifier: 
   _initialValue: 10
-  _value: 10
+  _value: 9
   _eventChanged: {fileID: 11400000, guid: af7e2fee306474e47948a254cf65e0df, type: 2}
-  m_hasMinValue: 0
+  m_hasMinValue: 1
   m_hasMaxValue: 0
   m_minValue: 0
   m_maxValue: 0
