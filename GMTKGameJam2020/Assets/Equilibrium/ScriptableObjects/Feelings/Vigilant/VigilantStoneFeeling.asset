@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2af3929db747a24f95974169042ee70, type: 3}
-  m_Name: AngerFeeling
+  m_Name: VigilantStoneFeeling
   m_EditorClassIdentifier: 
-  m_value: {fileID: 0}
+  m_value: {fileID: 11400000, guid: 9b71439e1eaa64040ab3e907d5dd7ec2, type: 2}
   m_positiveEffects: []
   m_negativeEffects: []
