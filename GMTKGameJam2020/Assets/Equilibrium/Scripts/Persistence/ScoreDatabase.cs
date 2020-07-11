@@ -29,18 +29,18 @@ namespace Equilibrium
     [Serializable]
     public class ScorePersistenceJSON
     {
-        public List<ScorePersistence> _scores;
+        public List<ScorePersistence> m_scores;
 
         public ScorePersistenceJSON(List<ScorePersistence> scores)
         {
-            _scores = scores;
+            m_scores = scores;
         }
     }
 
     [CreateAssetMenu(fileName = "ScoreDatabase", menuName = "Equilibrium/ScoreDatabase")]
     public class ScoreDatabase : ScriptableObject
     {
-        [SerializeField] private string _loadAt = "scores.json"; 
+        [SerializeField] private string m_loadAt = "scores.json"; 
         
         [NonSerialized] private List<ScorePersistence> _scores;
 
@@ -52,17 +52,24 @@ namespace Equilibrium
             Save();
         }
 
+        public void AddEntry(ScorePersistence score)
+        {
+            _scores.Add(score);
+        }
+        
         public void Load()
         {
             _scores = new List<ScorePersistence>();
-            string path = Path.Combine(Application.persistentDataPath, _loadAt);
+            string path = Path.Combine(Application.persistentDataPath, m_loadAt);
             if (File.Exists(path))
             {
                 string jsonContent = File.ReadAllText(path);
-                ScorePersistenceJSON scoresJson = JsonUtility.FromJson<ScorePersistenceJSON>(path);
-                _scores = scoresJson._scores;
+                if (string.IsNullOrEmpty(jsonContent) == false && jsonContent != "{}")
+                {
+                    ScorePersistenceJSON scoresJson = JsonUtility.FromJson<ScorePersistenceJSON>(path);
+                    _scores = scoresJson.m_scores;
+                }
             }
-
         }
 
         public void Save()
@@ -71,9 +78,10 @@ namespace Equilibrium
             {
                 _scores.Add(new ScorePersistence("Toto : " + i, "10", "20", "20'3", "1240"));
             }
-            
-            string path = Path.Combine(Application.persistentDataPath, _loadAt);
-            string jsonContent = JsonUtility.ToJson(_scores);
+
+            ScorePersistenceJSON json = new ScorePersistenceJSON(_scores);
+            string path = Path.Combine(Application.persistentDataPath, m_loadAt);
+            string jsonContent = JsonUtility.ToJson(json, true);
             File.WriteAllText(path, jsonContent);
         }
     }
