@@ -2123,6 +2123,12 @@ PrefabInstance:
       propertyPath: m_malusNegative.Array.data[0].m_effectMaxValue
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
+        type: 3}
+      propertyPath: m_feelingsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: db6d15a351fa1b24a82517fd4584268c,
+        type: 2}
     - target: {fileID: 6681691565840931432, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: _event
@@ -2137,7 +2143,7 @@ PrefabInstance:
     - target: {fileID: 7140665141560454284, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea9dccf1128e034fa8f7180bfdcde9f, type: 3}
@@ -2258,7 +2264,7 @@ PrefabInstance:
     - target: {fileID: 3027092338249407934, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3697360596376123948, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
@@ -4253,6 +4259,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9b71439e1eaa64040ab3e907d5dd7ec2,
         type: 2}
+    - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
+        type: 3}
+      propertyPath: m_feelingsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 84b83ab7704dbbe48a4bc8b1d1e45c44,
+        type: 2}
     - target: {fileID: 6681691565840931432, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: _event
@@ -4267,7 +4279,7 @@ PrefabInstance:
     - target: {fileID: 7140665141560454284, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea9dccf1128e034fa8f7180bfdcde9f, type: 3}
@@ -4694,6 +4706,12 @@ PrefabInstance:
       propertyPath: m_positiveThreshold
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
+        type: 3}
+      propertyPath: m_feelingsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ccddf1d5e1da854ea28f22698a50bc1,
+        type: 2}
     - target: {fileID: 6681691565840931432, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: _event
@@ -4708,7 +4726,7 @@ PrefabInstance:
     - target: {fileID: 7140665141560454284, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea9dccf1128e034fa8f7180bfdcde9f, type: 3}
@@ -4966,7 +4984,7 @@ PrefabInstance:
     - target: {fileID: 3027092338249407934, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3697360596376123948, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
@@ -5063,7 +5081,7 @@ PrefabInstance:
     - target: {fileID: 3027092338249407934, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3697360596376123948, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
@@ -5373,6 +5391,12 @@ PrefabInstance:
       propertyPath: m_malusPositive.Array.data[0].m_effectMaxValue
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
+        type: 3}
+      propertyPath: m_feelingsSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 071fd1a5b451d284c8408c918ea3231d,
+        type: 2}
     - target: {fileID: 6681691565840931432, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: _event

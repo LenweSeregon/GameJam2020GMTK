@@ -16,6 +16,7 @@
 			[SerializeField] Sprite m_Sprite;
 			[SerializeField] Color m_Color;
 
+			public IntVariable Property => m_property;
 			public Sprite Sprite => m_Sprite;
 			public Color Color => m_Color;
 		}
@@ -27,6 +28,14 @@
 		[SerializeField] List<FeelingSOItem> m_negativeMalusEffects;
 		[SerializeField] int m_negativeThreshold;
 		[SerializeField] int m_positiveThreshold;
+
+		public List<FeelingSOItem> PositiveBonusEffects => m_positiveBonusEffects;
+		public List<FeelingSOItem> NegativeBonusEffects => m_negativeBonusEffects;
+		public List<FeelingSOItem> PositiveMalusEffects => m_positiveMalusEffects;
+		public List<FeelingSOItem> NegativeMalusEffects => m_negativeMalusEffects;
+		public int NegativeThreshold => m_negativeThreshold;
+		public int PositiveThreshold => m_positiveThreshold;
+		public IntVariable Value => m_value;
 
 		public List<FeelingSOItem> RetrieveFeelingsItemImpacted()
 		{
