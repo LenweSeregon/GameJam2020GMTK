@@ -11,6 +11,7 @@ namespace Equilibrium
     {
         public override void OnInspectorGUI()
         {
+            serializedObject.Update();
             DrawPropertiesExcluding(serializedObject, "m_hasMinValue", "m_hasMaxValue", 
                 "m_minValue", "m_maxValue");
 
@@ -40,6 +41,8 @@ namespace Equilibrium
                 }
             }
             EditorGUILayout.EndHorizontal();
+
+            serializedObject.ApplyModifiedProperties();
         }
     } 
 }
