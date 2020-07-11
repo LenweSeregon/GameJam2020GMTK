@@ -5,8 +5,9 @@
 	using System.Collections.Generic;
 	using UnityEngine;
 	using System.Linq;
+    using static Equilibrium.FeelingsSO;
 
-	public class FeelingHandler : MonoBehaviour
+    public class FeelingHandler : MonoBehaviour
 	{
 		[Serializable]
 		public abstract class FeelingItem
@@ -16,12 +17,22 @@
 
 			protected int m_LastEffectValue = 0;
 
+			public FeelingItem(FeelingSOItem item)
+			{
+				m_property = item.Property;
+			}
+
 			public abstract void CheckEffect(IntVariable feelingValue, int threshold);
 		}
 
 		[Serializable]
 		public class FeelingItemPositive : FeelingItem
 		{
+			public FeelingItemPositive(FeelingSOItem item) :
+				base(item)
+			{
+			}
+
 			public override void CheckEffect(IntVariable feelingValue, int threshold)
 			{
 				/*if(feelingValue.Value >= threshold)
@@ -82,6 +93,11 @@
 		[Serializable]
 		public class FeelingItemNegative : FeelingItem
 		{
+			public FeelingItemNegative(FeelingSOItem item) :
+				base(item)
+			{
+			}
+
 			public override void CheckEffect(IntVariable feelingValue, int threshold)
 			{
 				if(feelingValue.Value <= threshold)
@@ -124,14 +140,31 @@
 			}
 		}
 
-		[SerializeField] private IntVariable m_feelingValue;
-		[SerializeField] private List<FeelingItemNegative> m_malusNegative;
-		[SerializeField] private List<FeelingItemPositive> m_malusPositive;
-		[SerializeField] private List<FeelingItemNegative> m_bonusNegative;
-		[SerializeField] private List<FeelingItemPositive> m_bonusPositive;
+		[SerializeField] FeelingsSO m_feelingsSO;
 
-		[SerializeField] private int m_negativeThreshold;
-		[SerializeField] private int m_positiveThreshold;
+		private IntVariable m_feelingValue;
+		private List<FeelingItemNegative> m_malusNegative;
+		private List<FeelingItemPositive> m_malusPositive;
+		private List<FeelingItemNegative> m_bonusNegative;
+		private List<FeelingItemPositive> m_bonusPositive;
+
+		private int m_negativeThreshold;
+		private int m_positiveThreshold;
+
+		private void Awake()
+		{
+			m_feelingValue = m_feelingsSO.Value;
+			m_malusNegative = new List<FeelingItemNegative>();
+			m_feelingsSO.NegativeMalusEffects.ForEach(x => m_malusNegative.Add(new FeelingItemNegative(x)));
+			m_malusPositive = new List<FeelingItemPositive>();
+			m_feelingsSO.PositiveMalusEffects.ForEach(x => m_malusPositive.Add(new FeelingItemPositive(x)));
+			m_bonusNegative = new List<FeelingItemNegative>();
+			m_feelingsSO.NegativeMalusEffects.ForEach(x => m_bonusNegative.Add(new FeelingItemNegative(x)));
+			m_bonusPositive = new List<FeelingItemPositive>();
+			m_feelingsSO.PositiveBonusEffects.ForEach(x => m_bonusPositive.Add(new FeelingItemPositive(x)));
+			m_negativeThreshold = m_feelingsSO.NegativeThreshold;
+			m_positiveThreshold = m_feelingsSO.PositiveThreshold;
+		}                                                                               
 
 		public void UpdateFeeling(int feelingValue)
 		{
