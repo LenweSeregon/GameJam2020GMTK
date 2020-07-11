@@ -1,7 +1,6 @@
-﻿using TMPro;
-
-namespace Equilibrium
+﻿namespace Equilibrium
 {
+    using TMPro;
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -17,6 +16,10 @@ namespace Equilibrium
         public void Init(string name, string coin, string enemyKilled, string time, string globalScore)
         {
             m_playerNameText.SetText(name);
+            m_playerCoinText.SetText(coin);
+            m_playerEnemyKilledText.SetText(enemyKilled);
+            m_playerTimeText.SetText(time);
+            m_playerGlobalScoreText.SetText(globalScore);
         }
     }
 }

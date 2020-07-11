@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961628252396970217}
   - component: {fileID: 69472792036605567}
+  - component: {fileID: 6770578615010373560}
   m_Layer: 5
   m_Name: UIScoreEntity
   m_TagString: Untagged
@@ -337,6 +338,23 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &6770578615010373560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330403979020045578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8455f16867118488be0f8ebbe305b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerNameText: {fileID: 2296685220877975170}
+  m_playerCoinText: {fileID: 1718049362860280701}
+  m_playerEnemyKilledText: {fileID: 8272724839881164366}
+  m_playerTimeText: {fileID: 4101780247852682352}
+  m_playerGlobalScoreText: {fileID: 1814156389540210779}
 --- !u!1 &2865957483270689463
 GameObject:
   m_ObjectHideFlags: 0
