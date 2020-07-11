@@ -56,10 +56,10 @@
 		}
 
 		[SerializeField] private IntVariable m_feelingValue;
-		[SerializeField] private List<FeelingItemPositive> m_malusNegative;
-		[SerializeField] private List<FeelingItemNegative> m_malusPositive;
+		[SerializeField] private List<FeelingItemNegative> m_malusNegative;
+		[SerializeField] private List<FeelingItemPositive> m_malusPositive;
 		[SerializeField] private List<FeelingItemPositive> m_bonusNegative;
-		[SerializeField] private List<FeelingItemNegative> m_bonusPositive;
+		[SerializeField] private List<FeelingItemPositive> m_bonusPositive;
 
 		[SerializeField] private int m_negativeThreshold;
 		[SerializeField] private int m_positiveThreshold;
