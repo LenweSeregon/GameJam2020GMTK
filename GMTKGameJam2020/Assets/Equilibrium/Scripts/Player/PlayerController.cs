@@ -25,7 +25,6 @@ namespace Equilibrium
 		public void Test(InputAction.CallbackContext ctx)
 		{
 			m_movementAction = ctx.ReadValue<Vector2>();
-			Debug.Log("nique");
 		}
 
 		private void FixedUpdate()
