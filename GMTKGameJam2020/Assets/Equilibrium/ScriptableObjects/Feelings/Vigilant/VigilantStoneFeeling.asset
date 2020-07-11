@@ -13,5 +13,37 @@ MonoBehaviour:
   m_Name: VigilantStoneFeeling
   m_EditorClassIdentifier: 
   m_value: {fileID: 11400000, guid: 9b71439e1eaa64040ab3e907d5dd7ec2, type: 2}
-  m_positiveEffects: []
-  m_negativeEffects: []
+  m_positiveBonusEffects:
+  - m_property: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
+    m_EffectMaxValue: 10
+    m_Sprite: {fileID: 21300000, guid: 7a97e285a7f1e44938910bd49925c9d8, type: 3}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_negativeBonusEffects:
+  - m_property: {fileID: 11400000, guid: e36e82f165776e842894f6f276cfd955, type: 2}
+    m_EffectMaxValue: -10
+    m_Sprite: {fileID: 21300000, guid: e5bdc9d03fe1f4df29ac733d627032f8, type: 3}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_property: {fileID: 11400000, guid: 72e645ad18e33df45874e692e28d9c0f, type: 2}
+    m_EffectMaxValue: -10
+    m_Sprite: {fileID: 21300000, guid: 8113d6212ff1d49989bcf115cac39bde, type: 3}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_property: {fileID: 11400000, guid: 2e445187bebdf504c94c9122d4081e65, type: 2}
+    m_EffectMaxValue: -10
+    m_Sprite: {fileID: 21300000, guid: 8c977800c43134e86b394adcc3a3e872, type: 3}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_positiveMalusEffects:
+  - m_property: {fileID: 11400000, guid: 9b2133035d257bc459bc76b75a29931a, type: 2}
+    m_EffectMaxValue: -10
+    m_Sprite: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_negativeMalusEffects:
+  - m_property: {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d, type: 2}
+    m_EffectMaxValue: 10
+    m_Sprite: {fileID: 21300000, guid: 495e969054dde4a5d88d038d81bd4ccc, type: 3}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  - m_property: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
+    m_EffectMaxValue: 10
+    m_Sprite: {fileID: 0}
+    m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_negativeThreshold: -50
+  m_positiveThreshold: 50

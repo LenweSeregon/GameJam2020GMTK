@@ -3790,7 +3790,7 @@ PrefabInstance:
     - target: {fileID: 3697360596376123948, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
       propertyPath: m_modificationValue
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8876858603230081871, guid: 16c1387fcb36ac64fb96eb958390fa48,
         type: 3}
@@ -4610,7 +4610,7 @@ PrefabInstance:
     - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_malusNegative.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
@@ -4625,7 +4625,7 @@ PrefabInstance:
     - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_malusPositive.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
@@ -4680,12 +4680,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_malusPositive.Array.data[0].m_property
       value: 
-      objectReference: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228,
+      objectReference: {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d,
         type: 2}
     - target: {fileID: 5030339265404077969, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}
       propertyPath: m_malusPositive.Array.data[0].m_effectMaxValue
-      value: -10
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6681691565840931432, guid: 4ea9dccf1128e034fa8f7180bfdcde9f,
         type: 3}

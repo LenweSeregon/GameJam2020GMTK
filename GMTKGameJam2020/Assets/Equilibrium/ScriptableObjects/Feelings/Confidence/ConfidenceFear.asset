@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ConfidenceFear
   m_EditorClassIdentifier: 
   _initialValue: 45
-  _value: -69
+  _value: 45
   _eventChanged: {fileID: 11400000, guid: 358f8fc351ddaba47b3ddd754a0c122d, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1
