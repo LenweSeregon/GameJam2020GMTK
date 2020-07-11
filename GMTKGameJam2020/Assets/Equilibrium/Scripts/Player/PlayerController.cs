@@ -12,7 +12,7 @@ namespace Equilibrium
 
 		private Vector2 m_movementAction;
 
-		private float m_speed = 1;
+		[SerializeField] private FloatVariable m_speed;
 
 		private Rigidbody2D m_rigidbody2D;
 
@@ -30,8 +30,8 @@ namespace Equilibrium
 
 		private void FixedUpdate()
 		{
-			float x = m_movementAction.x * m_speed * Time.fixedDeltaTime;
-			float y = m_movementAction.y * m_speed * Time.fixedDeltaTime;
+			float x = m_movementAction.x * m_speed.Value * Time.fixedDeltaTime;
+			float y = m_movementAction.y * m_speed.Value * Time.fixedDeltaTime;
 
 			Vector3 move = new Vector3(x, y, 0);
 
