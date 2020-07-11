@@ -35,7 +35,31 @@
 					m_LastEffectValue = Mathf.Abs(oldValue - m_property.Value);
 				}*/
 
-				if (feelingValue.Value >= threshold)
+				if(feelingValue.Value >= threshold)
+				{
+					// Compute the value we need to assign
+					float severity = (feelingValue.Value - threshold) / (((float)feelingValue.MaxValue) - threshold);
+					int applyValue = Mathf.RoundToInt(m_effectMaxValue * severity);
+
+					// Assign the value
+					if (m_effectMaxValue < 0)
+					{
+						m_property.Value = Mathf.Max(m_property.Value - m_LastEffectValue + applyValue, feelingValue.MinValue);
+					}
+					else
+					{
+						m_property.Value = Mathf.Min(m_property.Value - m_LastEffectValue + applyValue, feelingValue.MaxValue);
+					}
+					
+					m_LastEffectValue = applyValue;
+				}
+				
+				
+				
+				
+				
+				
+				/*if (feelingValue.Value >= threshold)
 				{
 					int oldValue = m_property.Value;
 
@@ -51,7 +75,7 @@
 					{
 						m_LastEffectValue += m_property.Value - oldValue;
 					}
-				}
+				}*/
 			}
 		}
 
@@ -60,7 +84,27 @@
 		{
 			public override void CheckEffect(IntVariable feelingValue, int threshold)
 			{
-				if (feelingValue.Value <= threshold)
+				if(feelingValue.Value <= threshold)
+				{
+					// Compute the value we need to assign
+					float severity = (feelingValue.Value - threshold) / (((float)feelingValue.MinValue) - threshold);
+					int applyValue = Mathf.RoundToInt(m_effectMaxValue * severity);
+
+					// Assign the value
+					if (m_effectMaxValue < 0)
+					{
+						m_property.Value = Mathf.Max(m_property.Value - m_LastEffectValue + applyValue, feelingValue.MinValue);
+					}
+					else
+					{
+						m_property.Value = Mathf.Min(m_property.Value - m_LastEffectValue + applyValue, feelingValue.MaxValue);
+					}
+					
+					m_LastEffectValue = applyValue;
+				}
+				
+				
+				/*if (feelingValue.Value <= threshold)
 				{
 					int oldValue = m_property.Value;
 
@@ -76,7 +120,7 @@
 					{
 						m_LastEffectValue += oldValue - m_property.Value;
 					}
-				}
+				}*/
 			}
 		}
 
