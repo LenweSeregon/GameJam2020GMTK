@@ -35,9 +35,6 @@ namespace Equilibrium
 			Vector3 move = new Vector3(x, y, 0);
 
 			move += transform.position;
-
-			Debug.Log(m_movementAction);
-
 			m_rigidbody2D.MovePosition(move);
 		}
 	}
