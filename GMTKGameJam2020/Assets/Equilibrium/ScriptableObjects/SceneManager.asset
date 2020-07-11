@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
-  m_Name: Tiredneed
+  m_Script: {fileID: 11500000, guid: 6056f37a890f8a748a6c2dc036a42fd3, type: 3}
+  m_Name: SceneManager
   m_EditorClassIdentifier: 
-  _initialValue: 50
-  _value: 50
-  _eventChanged: {fileID: 11400000, guid: 27c514bb252cf224a989ec0b334c2a6d, type: 2}
-  m_hasMinValue: 1
-  m_hasMaxValue: 1
-  m_minValue: 0
-  m_maxValue: 100
+  m_prefabLoadingScreen: {fileID: 3580437540674020901, guid: 08a9bddd622bc444c8adfc0f3c967460,
+    type: 3}
