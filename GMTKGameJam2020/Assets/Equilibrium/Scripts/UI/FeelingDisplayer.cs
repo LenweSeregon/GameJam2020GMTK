@@ -1,8 +1,7 @@
-﻿using System;
-using TMPro;
-
-namespace Equilibrium
+﻿namespace Equilibrium
 {
+    using System;
+    using TMPro;
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -40,11 +39,16 @@ namespace Equilibrium
             float percentage = ((float) value - m_feelingValue.MinValue) / ((float) m_feelingValue.MaxValue - m_feelingValue.MinValue);
             int percentage100 = Mathf.FloorToInt(percentage * 100);
             m_progress.value = percentage;
-            m_textProgress.SetText($"{percentage100} %");
+            m_textProgress.SetText($"{value}");
 
             CleanContainer();
             
             // Retrieve effects
+            foreach (FeelingsSO.FeelingSOItem item in m_feelingSO.RetrieveFeelingsItemImpacted())
+            {
+                FeelingEffectDisplayer displayer = Instantiate(m_feelingEffectPrefab, m_containerEffects, false);
+                displayer.Init(item.Sprite, item.Color);
+            }
         }
     }
 }

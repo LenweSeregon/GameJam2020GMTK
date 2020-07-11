@@ -2260,6 +2260,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.1099854
       objectReference: {fileID: 0}
+    - target: {fileID: 5725495617024963845, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.700012
+      objectReference: {fileID: 0}
     - target: {fileID: 5758544571047180953, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -2310,6 +2315,12 @@ PrefabInstance:
       propertyPath: m_feelingValue
       value: 
       objectReference: {fileID: 11400000, guid: 9b71439e1eaa64040ab3e907d5dd7ec2,
+        type: 2}
+    - target: {fileID: 6613094812614093619, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_feelingSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 84b83ab7704dbbe48a4bc8b1d1e45c44,
         type: 2}
     - target: {fileID: 7399036469229469146, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
@@ -3095,6 +3106,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.1099854
       objectReference: {fileID: 0}
+    - target: {fileID: 5725495617024963845, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.700012
+      objectReference: {fileID: 0}
     - target: {fileID: 5758544571047180953, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -3145,6 +3161,12 @@ PrefabInstance:
       propertyPath: m_feelingValue
       value: 
       objectReference: {fileID: 11400000, guid: e36e82f165776e842894f6f276cfd955,
+        type: 2}
+    - target: {fileID: 6613094812614093619, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_feelingSO
+      value: 
+      objectReference: {fileID: 11400000, guid: db6d15a351fa1b24a82517fd4584268c,
         type: 2}
     - target: {fileID: 7399036469229469146, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
@@ -3431,6 +3453,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.1099854
       objectReference: {fileID: 0}
+    - target: {fileID: 5725495617024963845, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.700012
+      objectReference: {fileID: 0}
     - target: {fileID: 5758544571047180953, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -3481,6 +3508,12 @@ PrefabInstance:
       propertyPath: m_feelingValue
       value: 
       objectReference: {fileID: 11400000, guid: 72e645ad18e33df45874e692e28d9c0f,
+        type: 2}
+    - target: {fileID: 6613094812614093619, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_feelingSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ccddf1d5e1da854ea28f22698a50bc1,
         type: 2}
     - target: {fileID: 7399036469229469146, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
@@ -3787,6 +3820,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5.1099854
       objectReference: {fileID: 0}
+    - target: {fileID: 5725495617024963845, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.700012
+      objectReference: {fileID: 0}
     - target: {fileID: 5758544571047180953, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -3837,6 +3875,12 @@ PrefabInstance:
       propertyPath: m_feelingValue
       value: 
       objectReference: {fileID: 11400000, guid: 2e445187bebdf504c94c9122d4081e65,
+        type: 2}
+    - target: {fileID: 6613094812614093619, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
+        type: 3}
+      propertyPath: m_feelingSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 071fd1a5b451d284c8408c918ea3231d,
         type: 2}
     - target: {fileID: 7399036469229469146, guid: 5a9b4c6c89f00134c9c3414aa6a49adb,
         type: 3}

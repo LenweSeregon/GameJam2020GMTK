@@ -85,6 +85,7 @@ GameObject:
   - component: {fileID: 4489808785934303763}
   - component: {fileID: 8526712194030325944}
   - component: {fileID: 746322448232757655}
+  - component: {fileID: 3954313754721783998}
   m_Layer: 5
   m_Name: EffectDisplayer
   m_TagString: Untagged
@@ -134,6 +135,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_image: {fileID: 5216552649995318064}
+--- !u!114 &3954313754721783998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3561452094828119995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: 30
+  m_PreferredHeight: 30
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &6500810442120272062
 GameObject:
   m_ObjectHideFlags: 0

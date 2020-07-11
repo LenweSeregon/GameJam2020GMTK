@@ -17,17 +17,17 @@ MonoBehaviour:
   - m_property: {fileID: 11400000, guid: 13f8e58ec0c67ad4aa1a4d892b2c9aa8, type: 2}
     m_EffectMaxValue: 10
     m_Sprite: {fileID: 0}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.14117648, g: 0.48235294, b: 0.03137255, a: 1}
   m_negativeBonusEffects: []
   m_positiveMalusEffects:
   - m_property: {fileID: 11400000, guid: 6229bc2e0923fd74faf372d0a97610cc, type: 2}
     m_EffectMaxValue: -10
     m_Sprite: {fileID: 21300000, guid: 718fc6c3d960d466991395b8aa922a80, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.7294118, g: 0.02745098, b: 0.05882353, a: 1}
   m_negativeMalusEffects:
   - m_property: {fileID: 11400000, guid: 91fbad49a9a49ea42ad9585f874f5ced, type: 2}
     m_EffectMaxValue: 10
     m_Sprite: {fileID: 21300000, guid: 08ba2b0c2636a4d70b6010def026ae13, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.7294118, g: 0.02745098, b: 0.05882353, a: 1}
   m_negativeThreshold: -50
   m_positiveThreshold: 50

@@ -17,21 +17,21 @@ MonoBehaviour:
   - m_property: {fileID: 11400000, guid: 4921505da0319aa47b5cf253b469501e, type: 2}
     m_EffectMaxValue: 10
     m_Sprite: {fileID: 21300000, guid: 2fd9b6411a9f54fa096bcb9b5082d81f, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.13750148, g: 0.4811321, b: 0.029503396, a: 1}
   m_negativeBonusEffects:
   - m_property: {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d, type: 2}
     m_EffectMaxValue: 10
     m_Sprite: {fileID: 21300000, guid: 3b5b486ddcd4043e2b0a4e5f3a5120b5, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.14117648, g: 0.48235294, b: 0.03137255, a: 1}
   m_positiveMalusEffects:
   - m_property: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
     m_EffectMaxValue: -10
     m_Sprite: {fileID: 21300000, guid: 158a8c105d2fe4e9f986f1a51be218ce, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.7264151, g: 0.023985418, b: 0.05800574, a: 1}
   m_negativeMalusEffects:
   - m_property: {fileID: 11400000, guid: 461d07ead074d4c4283d9e6f28ac96a0, type: 2}
     m_EffectMaxValue: 0
     m_Sprite: {fileID: 21300000, guid: ebcfaded3c8b74911be380a76e66812d, type: 3}
-    m_Color: {r: 0, g: 0, b: 0, a: 0}
+    m_Color: {r: 0.7294118, g: 0.02745098, b: 0.05882353, a: 1}
   m_negativeThreshold: -50
   m_positiveThreshold: 50

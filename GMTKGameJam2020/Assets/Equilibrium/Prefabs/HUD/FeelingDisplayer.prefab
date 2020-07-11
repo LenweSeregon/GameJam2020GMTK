@@ -1121,6 +1121,7 @@ GameObject:
   - component: {fileID: 8901615328000552846}
   - component: {fileID: 3146794134346337605}
   - component: {fileID: 6613094812614093619}
+  - component: {fileID: 7344922919563488620}
   m_Layer: 5
   m_Name: FeelingDisplayer
   m_TagString: Untagged
@@ -1186,11 +1187,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_progress: {fileID: 3102674101884837871}
+  m_feelingSO: {fileID: 0}
   m_feelingValue: {fileID: 0}
   m_textProgress: {fileID: 1428311608105370293}
   m_containerEffects: {fileID: 8827357778035290344}
   m_feelingEffectPrefab: {fileID: 746322448232757655, guid: 4e4ab4152b77ff545a250ce9f244cc9b,
     type: 3}
+--- !u!114 &7344922919563488620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818054017828389479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2649da919b857f842a5dced13112fbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _event: {fileID: 0}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6613094812614093619}
+        m_MethodName: UpdateDisplayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7913089849590939718
 GameObject:
   m_ObjectHideFlags: 0
