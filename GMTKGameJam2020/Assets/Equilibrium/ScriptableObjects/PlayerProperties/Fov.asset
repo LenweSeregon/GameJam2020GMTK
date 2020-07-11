@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2af3929db747a24f95974169042ee70, type: 3}
-  m_Name: AngerFeeling
+  m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
+  m_Name: Fov
   m_EditorClassIdentifier: 
-  m_value: {fileID: 0}
-  m_positiveEffects: []
-  m_negativeEffects: []
+  _initialValue: 0
+  _value: 0
+  _eventChanged: {fileID: 0}

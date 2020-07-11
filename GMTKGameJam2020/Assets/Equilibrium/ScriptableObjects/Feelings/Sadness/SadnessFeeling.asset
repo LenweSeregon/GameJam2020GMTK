@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2af3929db747a24f95974169042ee70, type: 3}
   m_Name: SadnessFeeling
   m_EditorClassIdentifier: 
-  m_value: {fileID: 11400000, guid: 7a045238818f24b40960fe8f3232e1c8, type: 2}
+  m_value: {fileID: 0}
   m_positiveEffects: []
   m_negativeEffects: []

@@ -12,7 +12,7 @@ namespace Equilibrium
 
 		private Vector2 m_movementAction;
 
-		[SerializeField] private FloatVariable m_speed;
+		[SerializeField] private IntVariable m_speed;
 
 		private Rigidbody2D m_rigidbody2D;
 
