@@ -45,11 +45,7 @@
 
 			if(m_LifeTimer > 0)
 			{
-				m_LifeTimer += Time.deltaTime;
-				if(m_LifeTimer > m_GameOverTimer)
-				{
-					GameOver();
-				}
+				GameOver();
 			}
 			if (m_HungryTimer > 0)
 			{

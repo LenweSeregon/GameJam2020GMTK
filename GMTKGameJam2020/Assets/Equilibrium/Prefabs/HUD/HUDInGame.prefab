@@ -2410,6 +2410,7 @@ MonoBehaviour:
           m_StringArgument: Close
           m_BoolArgument: 0
         m_CallState: 2
+  m_baseValue: 1
 --- !u!1001 &606225087283774090
 PrefabInstance:
   m_ObjectHideFlags: 0

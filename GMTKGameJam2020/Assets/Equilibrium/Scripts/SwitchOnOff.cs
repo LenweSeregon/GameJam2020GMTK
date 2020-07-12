@@ -9,10 +9,16 @@
     {
         [SerializeField] private UnityEvent _eventSwitchOn;
         [SerializeField] private UnityEvent _eventSwitchOff;
+		[SerializeField] private bool m_baseValue = false;
 
         private bool _on = false;
 
-        public void Switch()
+		private void Awake()
+		{
+			_on = m_baseValue;
+		}
+
+		public void Switch()
         {
             if (_on)
             {

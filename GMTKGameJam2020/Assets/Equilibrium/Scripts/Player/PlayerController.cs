@@ -115,7 +115,12 @@ namespace Equilibrium
 		{
 			int damageReduced = damage - ((int) (m_defence.Value * m_reductionPerDefencePoint));
 			damageReduced = Mathf.Clamp(damageReduced, 5, int.MaxValue);
-			m_life.Value = m_life.Value - damageReduced;
+
+			int newLife = m_life.Value - damageReduced;
+			if (newLife < 0)
+				newLife = 0;
+
+			m_life.Value = newLife;
 		}
 
 		private void FixedUpdate()
