@@ -27,6 +27,7 @@ namespace Equilibrium
 		[SerializeField] private float m_rotationSpeed = 160f;
 		[SerializeField] private IntVariable m_speed;
 		[SerializeField] private Animator m_animator;
+		[SerializeField] private Light m_associatedLight;
 
 		[SerializeField] private IntVariable m_controlReversed;
 		[SerializeField] private IntVariable m_desorientation;
@@ -39,6 +40,12 @@ namespace Equilibrium
 		[SerializeField] private float m_rightAngleAttack = 15f;
 		[SerializeField] private WeaponCollider m_weaponCollider;
 
+		public void UpdateLight(int light)
+		{
+			int intensity = Mathf.Clamp(light, 0, 20);
+			m_associatedLight.intensity = intensity;
+		}
+		
 		public void Move(InputAction.CallbackContext ctx)
 		{
 			if (m_controlReversed.Value > 0)
