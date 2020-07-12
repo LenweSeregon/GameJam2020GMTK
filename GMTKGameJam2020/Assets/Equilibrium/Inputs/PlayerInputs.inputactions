@@ -2,7 +2,7 @@
     "name": "PlayerInputs",
     "maps": [
         {
-            "name": "PlayerMovement",
+            "name": "PlayerKeys",
             "id": "96d0a0dc-0037-41d5-8a18-4049e8e84019",
             "actions": [
                 {
@@ -10,6 +10,22 @@
                     "type": "PassThrough",
                     "id": "13b084b6-e135-4064-ba36-868defbaf45a",
                     "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Roll",
+                    "type": "Button",
+                    "id": "b11b2bed-7245-470a-8dee-100a4b0a341d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "a6d41fe4-59d4-47f6-99c5-94bcc715a3f3",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -124,6 +140,28 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ac619212-60a8-473b-bd5f-a6ad5a30c8d9",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44454707-997e-4c89-ab49-99b6f330c840",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

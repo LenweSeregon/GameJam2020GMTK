@@ -17,7 +17,7 @@ namespace Equilibrium
     ""name"": ""PlayerInputs"",
     ""maps"": [
         {
-            ""name"": ""PlayerMovement"",
+            ""name"": ""PlayerKeys"",
             ""id"": ""96d0a0dc-0037-41d5-8a18-4049e8e84019"",
             ""actions"": [
                 {
@@ -25,6 +25,22 @@ namespace Equilibrium
                     ""type"": ""PassThrough"",
                     ""id"": ""13b084b6-e135-4064-ba36-868defbaf45a"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Roll"",
+                    ""type"": ""Button"",
+                    ""id"": ""b11b2bed-7245-470a-8dee-100a4b0a341d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""a6d41fe4-59d4-47f6-99c5-94bcc715a3f3"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -139,15 +155,39 @@ namespace Equilibrium
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ac619212-60a8-473b-bd5f-a6ad5a30c8d9"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44454707-997e-4c89-ab49-99b6f330c840"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-            // PlayerMovement
-            m_PlayerMovement = asset.FindActionMap("PlayerMovement", throwIfNotFound: true);
-            m_PlayerMovement_Move = m_PlayerMovement.FindAction("Move", throwIfNotFound: true);
+            // PlayerKeys
+            m_PlayerKeys = asset.FindActionMap("PlayerKeys", throwIfNotFound: true);
+            m_PlayerKeys_Move = m_PlayerKeys.FindAction("Move", throwIfNotFound: true);
+            m_PlayerKeys_Roll = m_PlayerKeys.FindAction("Roll", throwIfNotFound: true);
+            m_PlayerKeys_Attack = m_PlayerKeys.FindAction("Attack", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -194,41 +234,59 @@ namespace Equilibrium
             asset.Disable();
         }
 
-        // PlayerMovement
-        private readonly InputActionMap m_PlayerMovement;
-        private IPlayerMovementActions m_PlayerMovementActionsCallbackInterface;
-        private readonly InputAction m_PlayerMovement_Move;
-        public struct PlayerMovementActions
+        // PlayerKeys
+        private readonly InputActionMap m_PlayerKeys;
+        private IPlayerKeysActions m_PlayerKeysActionsCallbackInterface;
+        private readonly InputAction m_PlayerKeys_Move;
+        private readonly InputAction m_PlayerKeys_Roll;
+        private readonly InputAction m_PlayerKeys_Attack;
+        public struct PlayerKeysActions
         {
             private @PlayerInputs m_Wrapper;
-            public PlayerMovementActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Move => m_Wrapper.m_PlayerMovement_Move;
-            public InputActionMap Get() { return m_Wrapper.m_PlayerMovement; }
+            public PlayerKeysActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Move => m_Wrapper.m_PlayerKeys_Move;
+            public InputAction @Roll => m_Wrapper.m_PlayerKeys_Roll;
+            public InputAction @Attack => m_Wrapper.m_PlayerKeys_Attack;
+            public InputActionMap Get() { return m_Wrapper.m_PlayerKeys; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
             public bool enabled => Get().enabled;
-            public static implicit operator InputActionMap(PlayerMovementActions set) { return set.Get(); }
-            public void SetCallbacks(IPlayerMovementActions instance)
+            public static implicit operator InputActionMap(PlayerKeysActions set) { return set.Get(); }
+            public void SetCallbacks(IPlayerKeysActions instance)
             {
-                if (m_Wrapper.m_PlayerMovementActionsCallbackInterface != null)
+                if (m_Wrapper.m_PlayerKeysActionsCallbackInterface != null)
                 {
-                    @Move.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMove;
-                    @Move.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMove;
-                    @Move.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnMove;
+                    @Move.started -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnMove;
+                    @Move.performed -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnMove;
+                    @Move.canceled -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnMove;
+                    @Roll.started -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnRoll;
+                    @Roll.performed -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnRoll;
+                    @Roll.canceled -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnRoll;
+                    @Attack.started -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
+                    @Attack.performed -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
+                    @Attack.canceled -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
                 }
-                m_Wrapper.m_PlayerMovementActionsCallbackInterface = instance;
+                m_Wrapper.m_PlayerKeysActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     @Move.started += instance.OnMove;
                     @Move.performed += instance.OnMove;
                     @Move.canceled += instance.OnMove;
+                    @Roll.started += instance.OnRoll;
+                    @Roll.performed += instance.OnRoll;
+                    @Roll.canceled += instance.OnRoll;
+                    @Attack.started += instance.OnAttack;
+                    @Attack.performed += instance.OnAttack;
+                    @Attack.canceled += instance.OnAttack;
                 }
             }
         }
-        public PlayerMovementActions @PlayerMovement => new PlayerMovementActions(this);
-        public interface IPlayerMovementActions
+        public PlayerKeysActions @PlayerKeys => new PlayerKeysActions(this);
+        public interface IPlayerKeysActions
         {
             void OnMove(InputAction.CallbackContext context);
+            void OnRoll(InputAction.CallbackContext context);
+            void OnAttack(InputAction.CallbackContext context);
         }
     }
 }
