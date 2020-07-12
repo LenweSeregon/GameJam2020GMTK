@@ -43,6 +43,14 @@ namespace Equilibrium
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""58d2ee01-28c1-4242-8717-53b0a2510a2c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -177,6 +185,17 @@ namespace Equilibrium
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8a1fb08-60df-49d0-af6b-a1aa78ede56d"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -188,6 +207,7 @@ namespace Equilibrium
             m_PlayerKeys_Move = m_PlayerKeys.FindAction("Move", throwIfNotFound: true);
             m_PlayerKeys_Roll = m_PlayerKeys.FindAction("Roll", throwIfNotFound: true);
             m_PlayerKeys_Attack = m_PlayerKeys.FindAction("Attack", throwIfNotFound: true);
+            m_PlayerKeys_Interact = m_PlayerKeys.FindAction("Interact", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -240,6 +260,7 @@ namespace Equilibrium
         private readonly InputAction m_PlayerKeys_Move;
         private readonly InputAction m_PlayerKeys_Roll;
         private readonly InputAction m_PlayerKeys_Attack;
+        private readonly InputAction m_PlayerKeys_Interact;
         public struct PlayerKeysActions
         {
             private @PlayerInputs m_Wrapper;
@@ -247,6 +268,7 @@ namespace Equilibrium
             public InputAction @Move => m_Wrapper.m_PlayerKeys_Move;
             public InputAction @Roll => m_Wrapper.m_PlayerKeys_Roll;
             public InputAction @Attack => m_Wrapper.m_PlayerKeys_Attack;
+            public InputAction @Interact => m_Wrapper.m_PlayerKeys_Interact;
             public InputActionMap Get() { return m_Wrapper.m_PlayerKeys; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -265,6 +287,9 @@ namespace Equilibrium
                     @Attack.started -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
                     @Attack.performed -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
                     @Attack.canceled -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnAttack;
+                    @Interact.started -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnInteract;
+                    @Interact.performed -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnInteract;
+                    @Interact.canceled -= m_Wrapper.m_PlayerKeysActionsCallbackInterface.OnInteract;
                 }
                 m_Wrapper.m_PlayerKeysActionsCallbackInterface = instance;
                 if (instance != null)
@@ -278,6 +303,9 @@ namespace Equilibrium
                     @Attack.started += instance.OnAttack;
                     @Attack.performed += instance.OnAttack;
                     @Attack.canceled += instance.OnAttack;
+                    @Interact.started += instance.OnInteract;
+                    @Interact.performed += instance.OnInteract;
+                    @Interact.canceled += instance.OnInteract;
                 }
             }
         }
@@ -287,6 +315,7 @@ namespace Equilibrium
             void OnMove(InputAction.CallbackContext context);
             void OnRoll(InputAction.CallbackContext context);
             void OnAttack(InputAction.CallbackContext context);
+            void OnInteract(InputAction.CallbackContext context);
         }
     }
 }

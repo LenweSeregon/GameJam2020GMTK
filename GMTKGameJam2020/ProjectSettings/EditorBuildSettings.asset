@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Equilibrium/Scenes/TestCharacterController.unity
     guid: 11818c63a4846124ab86c75f9ebdb99c
+  - enabled: 1
+    path: Assets/Equilibrium/Scenes/GameScene.unity
+    guid: 8a97974f8bcc45f45b08c67ef53e545d
   m_configObjects: {}

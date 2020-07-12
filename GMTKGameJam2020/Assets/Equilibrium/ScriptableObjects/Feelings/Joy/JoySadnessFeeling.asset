@@ -16,7 +16,7 @@ MonoBehaviour:
   m_positiveBonusEffects:
   - m_property: {fileID: 11400000, guid: 13f8e58ec0c67ad4aa1a4d892b2c9aa8, type: 2}
     m_EffectMaxValue: 10
-    m_Sprite: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: f410845f5c6174c7c893ac7ebf479296, type: 3}
     m_Color: {r: 0.14117648, g: 0.48235294, b: 0.03137255, a: 1}
   m_negativeBonusEffects: []
   m_positiveMalusEffects:

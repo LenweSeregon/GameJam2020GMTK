@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: ConfidenceFear
   m_EditorClassIdentifier: 
-  _initialValue: -55
-  _value: 1
+  _initialValue: 0
+  _value: -55
   _eventChanged: {fileID: 11400000, guid: 358f8fc351ddaba47b3ddd754a0c122d, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1

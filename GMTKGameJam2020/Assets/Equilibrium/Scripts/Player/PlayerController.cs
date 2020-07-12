@@ -96,7 +96,14 @@ namespace Equilibrium
 
 			if (m_movementAction.y > 0)
 			{
-				m_animator.SetFloat("Speed", 1f);
+				if (m_speed.Value >= 4f)
+				{
+					m_animator.SetFloat("Speed", 2f);
+				}
+				else
+				{
+					m_animator.SetFloat("Speed", 1f);
+				}
 			}
 			else if (m_movementAction.y < 0)
 			{

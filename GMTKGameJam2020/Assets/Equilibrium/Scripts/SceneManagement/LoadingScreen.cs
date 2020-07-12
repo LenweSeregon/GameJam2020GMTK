@@ -17,6 +17,7 @@
         
         public void FadeIn(Action callbackFadeInEnd)
         {
+            gameObject.SetActive(true);
             m_callbackFadeIn = callbackFadeInEnd;
             m_animator.SetTrigger(TRIGGER_FADE_IN);
         }
@@ -34,6 +35,7 @@
 
         public void FadeOutEnd()
         {
+            gameObject.SetActive(false);
             m_callbackFadeOut?.Invoke();
         }
     }

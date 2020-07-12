@@ -28,6 +28,26 @@
 			{
 				if(needValue.Value >= m_threshold)
 				{
+					// Compute the value we need to assign
+					float severity = (needValue.Value - m_threshold) / (((float)needValue.MaxValue) - m_threshold);
+					int applyValue = Mathf.RoundToInt(m_effectMaxValue * severity);
+
+					
+					// Assign the value
+					if (m_effectMaxValue < 0)
+					{
+						m_feeling.Value = Mathf.Max(m_feeling.Value - m_LastEffectValue + applyValue, m_feeling.MinValue);
+						m_LastEffectValue = applyValue;
+					}
+					else
+					{
+						m_feeling.Value = Mathf.Min(m_feeling.Value - m_LastEffectValue + applyValue, m_feeling.MaxValue);
+						m_LastEffectValue = applyValue;
+					}
+				}
+				
+				/*if(needValue.Value >= m_threshold)
+				{
 					int oldValue = m_feeling.Value;
 
 					float severity = (needValue.Value - m_threshold) / (100.0f - m_threshold);
@@ -35,7 +55,7 @@
 
 					m_feeling.Value = Mathf.Min(m_feeling.Value - m_LastEffectValue + applyValue, 100);
 					m_LastEffectValue = Mathf.Abs(oldValue - m_feeling.Value);
-				}
+				}*/
 			}
 		}
 
@@ -44,7 +64,26 @@
 		{
 			public override void CheckEffect(IntVariable needValue)
 			{
-				if (needValue.Value <= m_threshold)
+				if(needValue.Value <= m_threshold)
+				{
+					// Compute the value we need to assign
+					float severity = (needValue.Value - m_threshold) / (((float)needValue.MinValue) - m_threshold);
+					int applyValue = Mathf.RoundToInt(m_effectMaxValue * severity);
+
+					// Assign the value
+					if (m_effectMaxValue < 0)
+					{
+						m_feeling.Value = Mathf.Min(m_feeling.Value + m_LastEffectValue - applyValue, m_feeling.MaxValue);
+						m_LastEffectValue = applyValue;
+					}
+					else
+					{
+						m_feeling.Value = Mathf.Max(m_feeling.Value + m_LastEffectValue - applyValue, m_feeling.MinValue);
+						m_LastEffectValue = applyValue;
+					}
+				}
+
+				/*if (needValue.Value <= m_threshold)
 				{
 					int oldValue = m_feeling.Value;
 
@@ -53,7 +92,7 @@
 
 					m_feeling.Value = Mathf.Max(m_feeling.Value + m_LastEffectValue - applyValue, 0);
 					m_LastEffectValue = Mathf.Abs(oldValue - m_feeling.Value);
-				}
+				}*/
 			}
 		}
 

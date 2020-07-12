@@ -16,6 +16,7 @@
 			[SerializeField] Sprite m_Sprite;
 			[SerializeField] Color m_Color;
 
+			public float EffectMaxValue => m_EffectMaxValue;
 			public IntVariable Property => m_property;
 			public Sprite Sprite => m_Sprite;
 			public Color Color => m_Color;
