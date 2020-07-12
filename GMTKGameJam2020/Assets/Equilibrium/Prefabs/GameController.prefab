@@ -163,9 +163,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 507a8c82ccf47a84282737f911dc4185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_variables:
+  - {fileID: 11400000, guid: cf18333cffb2e4d419880bf0c88800ba, type: 2}
+  - {fileID: 11400000, guid: 0bd042c629a2fdc4794d20e0e62cf717, type: 2}
+  - {fileID: 11400000, guid: 2e445187bebdf504c94c9122d4081e65, type: 2}
+  - {fileID: 11400000, guid: e36e82f165776e842894f6f276cfd955, type: 2}
+  - {fileID: 11400000, guid: 72e645ad18e33df45874e692e28d9c0f, type: 2}
+  - {fileID: 11400000, guid: 9b71439e1eaa64040ab3e907d5dd7ec2, type: 2}
+  - {fileID: 11400000, guid: aa8b9bf77ec462b4bbfcde8e1c795f81, type: 2}
+  - {fileID: 11400000, guid: d898158f48bd2a84fa7458c64acc73c3, type: 2}
+  - {fileID: 11400000, guid: a2c0ff9c16bbc2a4688e16fcbdeed0bc, type: 2}
+  - {fileID: 11400000, guid: 3d0e50e54895cde4d815287948021550, type: 2}
+  - {fileID: 11400000, guid: 91fbad49a9a49ea42ad9585f874f5ced, type: 2}
+  - {fileID: 11400000, guid: d191564132bdeb94188696d0dba374e0, type: 2}
+  - {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
+  - {fileID: 11400000, guid: 461d07ead074d4c4283d9e6f28ac96a0, type: 2}
+  - {fileID: 11400000, guid: 6229bc2e0923fd74faf372d0a97610cc, type: 2}
+  - {fileID: 11400000, guid: b63c5a4d51e2ffe46be293c0db1c49bb, type: 2}
+  - {fileID: 11400000, guid: 13f8e58ec0c67ad4aa1a4d892b2c9aa8, type: 2}
+  - {fileID: 11400000, guid: c4a471d9de3c52c4e9235148d732533d, type: 2}
+  - {fileID: 11400000, guid: 9b2133035d257bc459bc76b75a29931a, type: 2}
+  - {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d, type: 2}
+  - {fileID: 11400000, guid: f52a6f7eb0ea7074b9c5586341f2c9d6, type: 2}
+  - {fileID: 11400000, guid: 4921505da0319aa47b5cf253b469501e, type: 2}
+  m_variablesFloat:
+  - {fileID: 11400000, guid: ff8adcedeb8a4b845b339b1801a4c03c, type: 2}
+  - {fileID: 11400000, guid: 336f5320b82cee54db722f6c32a62440, type: 2}
+  - {fileID: 11400000, guid: 10e3e648c84823146bf1dfc4fcb7c3a4, type: 2}
+  - {fileID: 11400000, guid: f7921ce4b488cff4482179245287ab4c, type: 2}
+  - {fileID: 11400000, guid: bf516cef1cfdab64cbb2f05e02fafae0, type: 2}
   m_Timer: {fileID: 11400000, guid: 3832441583367054a9aa492497b4d899, type: 2}
   m_GameOverTimer: 5
   m_GameOverUI: {fileID: 0}
+  m_GameWinUI: {fileID: 0}
+  m_GameOverVariable: {fileID: 0}
 --- !u!1 &5996338267808109371
 GameObject:
   m_ObjectHideFlags: 0

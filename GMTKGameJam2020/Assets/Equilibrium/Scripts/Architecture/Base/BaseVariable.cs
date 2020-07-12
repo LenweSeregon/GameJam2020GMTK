@@ -28,6 +28,11 @@
         {
             _value = _initialValue;
         }
+
+        public void Reset()
+        {
+            Value = _initialValue;
+        }
     }
 }
 
