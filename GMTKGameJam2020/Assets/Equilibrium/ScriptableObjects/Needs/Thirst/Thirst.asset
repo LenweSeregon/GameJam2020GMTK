@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Thirst
   m_EditorClassIdentifier: 
-  _initialValue: 50
-  _value: 50
+  _initialValue: 100
+  _value: 0
   _eventChanged: {fileID: 11400000, guid: d938459c631da0a4a90f771a87777d81, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1

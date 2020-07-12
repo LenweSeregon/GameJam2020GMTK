@@ -10,6 +10,12 @@
 		[SerializeField] FloatVariable m_modificationDelay;
 		[SerializeField] int m_modificationValue;
 
+		public int ModifValue
+		{
+			get { return m_modificationValue; }
+			set { m_modificationValue = value; }
+		}
+
 		private float m_timer = 0;
 
 		private void Update()

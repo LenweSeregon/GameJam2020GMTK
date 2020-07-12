@@ -81,6 +81,7 @@
 
 		public void CheckGameOverHunger(int value)
 		{
+			Debug.Log(value);
 			if(m_HungryTimer == 0 && value <= 0)
 			{
 				m_HungryTimer += Time.deltaTime;

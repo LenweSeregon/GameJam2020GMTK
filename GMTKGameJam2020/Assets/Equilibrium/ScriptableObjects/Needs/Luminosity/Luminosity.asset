@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Luminosity
   m_EditorClassIdentifier: 
-  _initialValue: 10
-  _value: 5
+  _initialValue: 100
+  _value: 0
   _eventChanged: {fileID: 11400000, guid: 04a9f4418c59df744a6eb72131fdefc4, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1
