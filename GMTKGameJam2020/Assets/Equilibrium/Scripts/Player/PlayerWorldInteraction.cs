@@ -46,8 +46,12 @@
             if (ctx.started && m_interactable != null)
             {
                 m_interactable.Interact();
-                Destroy(m_interactable.gameObject);
-                m_interactable = null;
+
+                if (m_interactable.Delete)
+                {
+                    Destroy(m_interactable.gameObject);
+                    m_interactable = null;
+                }
             }
         }
     }

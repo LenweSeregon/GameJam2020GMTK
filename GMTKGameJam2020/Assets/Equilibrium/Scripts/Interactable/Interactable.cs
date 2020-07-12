@@ -44,6 +44,9 @@
     public class Interactable : MonoBehaviour
     {
         [SerializeField] private InteractableInteraction[] m_interactions;
+        [SerializeField] private bool m_delete = false;
+        
+        public bool Delete => m_delete;
         
         public void Interact()
         {

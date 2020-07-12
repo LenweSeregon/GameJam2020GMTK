@@ -1145,6 +1145,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &46181246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7210,6 +7211,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &585334771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11464,6 +11466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_interactions: []
+  m_delete: 0
 --- !u!1 &1003080858
 GameObject:
   m_ObjectHideFlags: 0
@@ -11583,6 +11586,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!1 &1003122272
 GameObject:
   m_ObjectHideFlags: 0
@@ -11642,6 +11646,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &1003122275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12393,6 +12398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_interactions: []
+  m_delete: 0
 --- !u!1001 &1064612934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15710,6 +15716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_interactions: []
+  m_delete: 0
 --- !u!1001 &1196831400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17717,6 +17724,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &1311594634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18229,6 +18237,7 @@ MonoBehaviour:
     m_minFactor: -100
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &1348844924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20710,6 +20719,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &1575716223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22315,6 +22325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_interactions: []
+  m_delete: 0
 --- !u!1 &1717442759
 GameObject:
   m_ObjectHideFlags: 0
@@ -26454,6 +26465,7 @@ MonoBehaviour:
     m_minFactor: -20
     m_useChances: 0
     m_chance: {fileID: 0}
+  m_delete: 0
 --- !u!65 &2061217277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28573,6 +28585,98 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233695860}
     m_Modifications:
+    - target: {fileID: 45797276, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 59413950, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189407682, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 309352414, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 519990478, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 533119233, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 557846265, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 611919351, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 714556959, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 798552293, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258409838, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1319260602, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378815055, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415790657, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499661672, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555289643, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634237067, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672909735, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711556651, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767756965, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777515033, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867429195, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969345812, guid: 3abdc88cae8f98649996a66bc29dee21, type: 3}
+      propertyPath: m_delete
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6867971369370989256, guid: 3abdc88cae8f98649996a66bc29dee21,
         type: 3}
       propertyPath: m_NavMeshLayer

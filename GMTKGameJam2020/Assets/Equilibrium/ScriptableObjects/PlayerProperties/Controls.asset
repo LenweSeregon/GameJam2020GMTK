@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Controls
   m_EditorClassIdentifier: 
   _initialValue: 0
-  _value: 1
+  _value: 0
   _eventChanged: {fileID: 0}
-  m_hasMinValue: 0
-  m_hasMaxValue: 0
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
   m_minValue: 0
-  m_maxValue: 0
+  m_maxValue: 1
