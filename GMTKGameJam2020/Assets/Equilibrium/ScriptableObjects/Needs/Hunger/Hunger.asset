@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hunger
   m_EditorClassIdentifier: 
   _initialValue: 50
-  _value: 50
+  _value: 43
   _eventChanged: {fileID: 11400000, guid: 09e52f17d06ac2449b14f8b35bd17144, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: CoinVariable
   m_EditorClassIdentifier: 
-  _initialValue: 10
-  _value: 10
+  _initialValue: 0
+  _value: 0
   _eventChanged: {fileID: 11400000, guid: 696ea3303b199ab4997926d1096395ea, type: 2}
   m_hasMinValue: 0
   m_hasMaxValue: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: TimeVariable
   m_EditorClassIdentifier: 
-  _initialValue: 150
-  _value: 150
+  _initialValue: 0
+  _value: 0
   _eventChanged: {fileID: 11400000, guid: d4e4e656675ee1040b95ce8a001bd19a, type: 2}
   m_hasMinValue: 0
   m_hasMaxValue: 0
