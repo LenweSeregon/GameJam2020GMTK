@@ -1,4 +1,6 @@
-﻿namespace Equilibrium
+﻿using System;
+
+namespace Equilibrium
 {
 	using System.Collections;
 	using System.Collections.Generic;
@@ -6,6 +8,8 @@
 
 	public class GameController : MonoBehaviour
 	{
+		[SerializeField] private IntVariable[] m_variables;
+		[SerializeField] private FloatVariable[] m_variablesFloat;
 		[SerializeField] IntVariable m_Timer;
 		[SerializeField] float m_GameOverTimer = 5.0f;
 		[SerializeField] GameObject m_GameOverUI;
@@ -19,9 +23,29 @@
 		float m_ThirstTimer = 0;
 		float m_TirednessTimer = 0;
 
+		private void Awake()
+		{
+			Time.timeScale = 1;
+			ResetVariables();
+		}
+
+		private void ResetVariables()
+		{
+			foreach (var variable in m_variables)
+			{
+				variable.Reset();
+			}
+
+			foreach (var variable in m_variablesFloat)
+			{
+				variable.Reset();
+			}
+		}
+
 
 		private void GameOver()
 		{
+			ResetVariables();
 			Time.timeScale = 0;
 			m_GameOverUI.SetActive(true);
 			m_GameOverVariable.Value = 1;
@@ -29,6 +53,7 @@
 
 		public void GameWon()
 		{
+			ResetVariables();
 			Time.timeScale = 0;
 			m_GameWinUI.SetActive(true);
 			m_GameOverVariable.Value = 1;
