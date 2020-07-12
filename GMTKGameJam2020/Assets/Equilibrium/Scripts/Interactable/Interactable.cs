@@ -12,9 +12,21 @@
         [SerializeField] private int m_maxFactor;
         [SerializeField] private int m_minFactor;
 
+        [SerializeField] private bool m_useChances = false;
+        [SerializeField] private IntVariable m_chance;
+
         public void Apply()
         {
-            int random = UnityEngine.Random.Range(m_minFactor, m_maxFactor);
+            int random = 0;
+            if (m_useChances)
+            {
+                random = UnityEngine.Random.Range(m_minFactor, m_maxFactor + m_chance.Value);
+            }
+            else
+            {
+                random = UnityEngine.Random.Range(m_minFactor, m_maxFactor);
+            }
+            
             int newValue = m_variableToModify.Value + random;
             
             if (m_variableToModify.HasMaxValue && m_variableToModify.HasMinValue)
