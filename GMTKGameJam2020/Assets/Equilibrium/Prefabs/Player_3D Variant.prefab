@@ -208,7 +208,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!54 &474149548
+--- !u!54 &2297873831010030648
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,13 +216,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001373497636753276}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 50
+  m_Drag: 20
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!136 &2073896527007213463
 CapsuleCollider:
@@ -269,12 +269,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4709c32ad9e304599f4f76d12c4490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_attenatorBackward: 0.075
+  m_attenatorBackward: 0.1
   m_attenator: 0.25
   m_attenatorDash: 0.35
   m_rotationSpeed: 160
   m_speed: {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d, type: 2}
   m_animator: {fileID: 474149546}
+  m_life: {fileID: 11400000, guid: b63c5a4d51e2ffe46be293c0db1c49bb, type: 2}
+  m_defence: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
+  m_reductionPerDefencePoint: 0.5
+  m_attackRange: 2
+  m_leftAngleAttack: -35
+  m_rightAngleAttack: 35
+  m_weaponCollider: {fileID: 1669260240417213478}
 --- !u!114 &474149549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +393,68 @@ MonoBehaviour:
   m_maxAngle: 5
   m_uiInteract: {fileID: 0}
   m_offsetRaycast: {x: 0, y: 1, z: 0}
+--- !u!1 &1582333517267325687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4528321545779615724}
+  - component: {fileID: 1558935457966744995}
+  - component: {fileID: 1669260240417213478}
+  m_Layer: 0
+  m_Name: ColliderSword
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4528321545779615724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582333517267325687}
+  m_LocalRotation: {x: 0.03355027, y: 0.1248019, z: 0.0043644626, w: 0.99160475}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1248543713577635377}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 3.7530003, y: 14.379001, z: 0.97800004}
+--- !u!65 &1558935457966744995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582333517267325687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2304223, y: 0.12817205, z: 1.273774}
+  m_Center: {x: 0.019246304, y: 0.008805264, z: 0.4355227}
+--- !u!114 &1669260240417213478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582333517267325687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b158d1a43ecb224782bdd1b34ae8b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pushForce: 40000
+  m_playerTransform: {fileID: 481400616490456518}
+  m_strengthPlayer: {fileID: 11400000, guid: 4921505da0319aa47b5cf253b469501e, type: 2}
+  m_damagePerStrength: 1
+  m_baseDamage: 15
 --- !u!1001 &82470184340435501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,6 +533,12 @@ GameObject:
 --- !u!4 &481400616490456518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 589e412e44e72824bbb63e53b5e800ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 82470184340435501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1248543713577635377 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8036873824727483364, guid: 589e412e44e72824bbb63e53b5e800ac,
     type: 3}
   m_PrefabInstance: {fileID: 82470184340435501}
   m_PrefabAsset: {fileID: 0}

@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Equilibrium
 {
-	[RequireComponent(typeof(Rigidbody))]
+	//[RequireComponent(typeof(Rigidbody))]
 	public class PlayerController : MonoBehaviour
 	{
 		private Vector2 m_movementAction;
@@ -26,12 +27,14 @@ namespace Equilibrium
 		[SerializeField] private IntVariable m_speed;
 		[SerializeField] private Animator m_animator;
 
-		private Rigidbody m_rigidbody;
+		[SerializeField] private IntVariable m_life;
+		[SerializeField] private IntVariable m_defence;
+		[SerializeField] private float m_reductionPerDefencePoint = 0.5f;
 
-		private void Awake()
-		{
-			m_rigidbody = GetComponent<Rigidbody>();
-		}
+		[SerializeField] private float m_attackRange = 2f;
+		[SerializeField] private float m_leftAngleAttack = -15f;
+		[SerializeField] private float m_rightAngleAttack = 15f;
+		[SerializeField] private WeaponCollider m_weaponCollider;
 
 		public void Move(InputAction.CallbackContext ctx)
 		{
@@ -70,9 +73,15 @@ namespace Equilibrium
 			}
 		}
 
+		public void GetHit(int damage)
+		{
+			int damageReduced = damage - ((int) (m_defence.Value * m_reductionPerDefencePoint));
+			damageReduced = Mathf.Clamp(damageReduced, 5, int.MaxValue);
+			m_life.Value = m_life.Value - damageReduced;
+		}
+
 		private void FixedUpdate()
 		{
-			
 			if (m_isRolling)
 			{
 				float step =  m_speed.Value * Time.fixedDeltaTime * m_attenatorDash;
@@ -116,6 +125,7 @@ namespace Equilibrium
 
 			if (m_shouldAttack)
 			{
+				m_weaponCollider.CanTrigger(true);
 				m_shouldAttack = false;
 				m_isAttacking = true;
 				m_animator.SetTrigger("Attack");
