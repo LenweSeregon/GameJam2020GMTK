@@ -9,6 +9,7 @@
 		[SerializeField] IntVariable m_Timer;
 		[SerializeField] float m_GameOverTimer = 5.0f;
 		[SerializeField] GameObject m_GameOverUI;
+		[SerializeField] private GameObject m_GameWinUI;
 		[SerializeField] IntVariable m_GameOverVariable;
 
 		private float m_Delay = 0;
@@ -21,8 +22,15 @@
 
 		private void GameOver()
 		{
-			Time.timeScale = 1;
+			Time.timeScale = 0;
 			m_GameOverUI.SetActive(true);
+			m_GameOverVariable.Value = 1;
+		}
+
+		public void GameWon()
+		{
+			Time.timeScale = 0;
+			m_GameWinUI.SetActive(true);
 			m_GameOverVariable.Value = 1;
 		}
 
