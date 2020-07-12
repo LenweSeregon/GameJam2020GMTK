@@ -275,6 +275,8 @@ MonoBehaviour:
   m_rotationSpeed: 160
   m_speed: {fileID: 11400000, guid: 7c3901d0e5908774cb25413fb28de61d, type: 2}
   m_animator: {fileID: 474149546}
+  m_controlReversed: {fileID: 11400000, guid: d191564132bdeb94188696d0dba374e0, type: 2}
+  m_desorientation: {fileID: 11400000, guid: 461d07ead074d4c4283d9e6f28ac96a0, type: 2}
   m_life: {fileID: 11400000, guid: b63c5a4d51e2ffe46be293c0db1c49bb, type: 2}
   m_defence: {fileID: 11400000, guid: e0c363423da760b448e255589bcfe228, type: 2}
   m_reductionPerDefencePoint: 0.5

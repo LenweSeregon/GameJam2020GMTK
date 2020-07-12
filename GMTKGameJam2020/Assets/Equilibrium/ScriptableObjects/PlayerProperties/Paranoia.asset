@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Paranoia
   m_EditorClassIdentifier: 
-  _initialValue: 0
+  _initialValue: 1
   _value: 0
   _eventChanged: {fileID: 0}
+  m_hasMinValue: 0
+  m_hasMaxValue: 0
+  m_minValue: 0
+  m_maxValue: 0
