@@ -19,8 +19,11 @@ namespace Equilibrium
         [SerializeField] private Slider m_slider;
         [SerializeField] private GameObject m_canvas;
         [SerializeField] private IntVariable m_nbEnemyKilled;
+        [SerializeField] private MissleadingPlayerView m_missleading;
 
         [SerializeField] private WeaponColliderEnemy m_weapon;
+        [SerializeField] private float m_minSpeed = 0.9f;
+        [SerializeField] private float m_maxSpeed = 2.1f;
 
         [SerializeField] private int m_damage = 30;
         [SerializeField] private int m_maxLife = 100;
@@ -43,6 +46,7 @@ namespace Equilibrium
             m_currentLife = m_maxLife;
             m_navMeshAgent = GetComponent<NavMeshAgent>();
             m_rigidbody = GetComponent<Rigidbody>();
+            m_navMeshAgent.speed = Random.Range(m_minSpeed, m_maxSpeed);
         }
 
         private void Start()
@@ -112,12 +116,21 @@ namespace Equilibrium
                 m_animator.SetTrigger("Death");
                 m_navMeshAgent.isStopped = true;
             }
-            
+
             // Display life
             m_slider.value = m_currentLife / (float) m_maxLife;
 
             float speed = (m_navMeshAgent.velocity.magnitude > 0f) ? 1f : 0f; 
             m_animator.SetFloat("Speed", speed);
+            if (speed > 0)
+            {
+                m_missleading.ResetNormal();
+            }
+            else if(m_isAttacking == false && m_isDying == false)
+            {
+                m_missleading.Listen();
+                m_missleading.UpdateMissleadingView();
+            }
         }
 
         public void GetHit(int damage, Vector3 pushDirection, float factorPush)
