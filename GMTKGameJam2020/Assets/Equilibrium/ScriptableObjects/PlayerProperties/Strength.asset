@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Strength
   m_EditorClassIdentifier: 
   _initialValue: 20
-  _value: 50
+  _value: 20
   _eventChanged: {fileID: 11400000, guid: 04f7a1a48557bd844ac8659abf22a455, type: 2}
-  m_hasMinValue: 0
-  m_hasMaxValue: 0
-  m_minValue: 0
-  m_maxValue: 0
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
+  m_minValue: 5
+  m_maxValue: 100

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Defence
   m_EditorClassIdentifier: 
-  _initialValue: 50
-  _value: 10
+  _initialValue: 20
+  _value: 0
   _eventChanged: {fileID: 11400000, guid: 33d48ef3a8747194ba339c388f2f98f0, type: 2}
-  m_hasMinValue: 0
-  m_hasMaxValue: 0
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
   m_minValue: 0
-  m_maxValue: 0
+  m_maxValue: 100

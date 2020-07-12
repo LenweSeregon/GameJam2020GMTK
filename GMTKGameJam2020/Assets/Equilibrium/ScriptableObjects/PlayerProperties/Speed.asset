@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bd1414210027047898de0e45ce5477, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
-  _initialValue: 10
-  _value: 2
+  _initialValue: 15
+  _value: 10
   _eventChanged: {fileID: 11400000, guid: af7e2fee306474e47948a254cf65e0df, type: 2}
   m_hasMinValue: 1
   m_hasMaxValue: 1
   m_minValue: 2
-  m_maxValue: 20
+  m_maxValue: 25

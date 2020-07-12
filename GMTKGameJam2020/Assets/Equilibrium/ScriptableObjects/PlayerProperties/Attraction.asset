@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Attraction
   m_EditorClassIdentifier: 
   _initialValue: 10
-  _value: 5
+  _value: 10
   _eventChanged: {fileID: 0}
-  m_hasMinValue: 0
-  m_hasMaxValue: 0
-  m_minValue: 0
-  m_maxValue: 0
+  m_hasMinValue: 1
+  m_hasMaxValue: 1
+  m_minValue: 5
+  m_maxValue: 100
