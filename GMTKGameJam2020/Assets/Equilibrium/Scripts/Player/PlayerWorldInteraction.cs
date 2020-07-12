@@ -37,7 +37,8 @@
             }
             
             
-            m_uiInteract.gameObject.SetActive(m_interactable != null);
+            if(m_uiInteract != null)
+                m_uiInteract.gameObject.SetActive(m_interactable != null);
         }
         
         public void Interact(InputAction.CallbackContext ctx)
